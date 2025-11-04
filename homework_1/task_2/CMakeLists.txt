@@ -13,3 +13,7 @@ add_executable(main src/main.cpp)
 
 # 添加库文件的路径
 target_link_libraries(main PRIVATE ${CMAKE_SOURCE_DIR}/build/libipb_arithmetic.a)
+
+# 定义安装目标
+install(TARGETS main DESTINATION bin)
+install(FILES ${CMAKE_SOURCE_DIR}/results/* DESTINATION bin)
